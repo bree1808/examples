@@ -1,0 +1,24 @@
+/* Write a C function, writeData(char *name, float *x, int N),
+which writes the first N elements of the array pointed to by x to a file as ASCII text
+data (ie: use the %f format specifier in fprintf()). Each element should be written
+to a new line. The file name is passed as the string pointed to by name.
+Your function must open the file with fopen(), write the data with fprintf(),
+then close the file with fclose(). It does not need to perform any error handling.
+The function prototypes for the functions above are:
+FILE *fopen(const char *pathname, const char *mode);
+int fprintf(FILE *stream, const char *format, ...);
+int fclose(FILE *stream);
+*/
+#include <stdio.h>
+
+void writeData(char *name, float *x, int N)// function 
+{
+    FILE *output = fopen(name, "w"); // open file to write to
+    int i;
+    
+     for ( i = 0; i <N; i++) // first N elements in array
+     {
+         fprintf(output, "%f\n" x[i]); // writes data with fprintf; pointed to by x; %f = ASCII text data
+     }
+     fclose(output); 
+}

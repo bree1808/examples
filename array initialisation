@@ -1,0 +1,15 @@
+#include <stdio.h>
+
+//initialise large arrays with loops
+int x[N];
+int counter;
+
+int main()
+{
+   
+    for (counter = 0; counter < N; counter ++)
+    {
+        x[counter]= 0;
+    }
+    return 0;
+}
